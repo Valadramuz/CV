@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1a0820"/>
+      <stop offset="100%" stop-color="#080110"/>
+    </radialGradient>
+    <!-- Ecuador flag colors: yellow, blue, red -->
+    <linearGradient id="flagGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#FFD100"/>
+      <stop offset="50%"  stop-color="#003087"/>
+      <stop offset="100%" stop-color="#CC1C2B"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD100" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#CC1C2B" stop-opacity="0.8"/>
+    </linearGradient>
+    <filter id="posterShadow">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity="0.55"/>
+    </filter>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="posterClip1"><rect x="56"  y="90" width="130" height="195" rx="8"/></clipPath>
+    <clipPath id="posterClip2"><rect x="214" y="90" width="130" height="195" rx="8"/></clipPath>
+    <clipPath id="posterClip3"><rect x="135" y="165" width="130" height="195" rx="8"/></clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="500" fill="url(#bg)"/>
+  <ellipse cx="200" cy="250" rx="200" ry="180" fill="#CC1C2B" fill-opacity="0.06"/>
+  <ellipse cx="80"  cy="180" rx="100" ry="90"  fill="#FFD100" fill-opacity="0.05"/>
+  <ellipse cx="320" cy="320" rx="100" ry="90"  fill="#003087" fill-opacity="0.08"/>
+
+  <!-- Ecuador flag stripe accent (left edge) -->
+  <rect x="0" y="0" width="8" height="167" fill="#FFD100"/>
+  <rect x="0" y="167" width="8" height="167" fill="#003087"/>
+  <rect x="0" y="334" width="8" height="166" fill="#CC1C2B"/>
+
+  <!-- Poster stack — 3 overlapping posters centered around (200,250) -->
+
+  <!-- Back-left poster -->
+  <g transform="rotate(-6, 121, 187)">
+    <rect x="56" y="90" width="130" height="195" rx="8" fill="#0d0820" stroke="#FFD100" stroke-width="1.5" stroke-opacity="0.6" filter="url(#posterShadow)"/>
+    <!-- Flag stripe top -->
+    <rect x="56" y="90" width="130" height="22" rx="8" fill="#FFD100" fill-opacity="0.9"/>
+    <rect x="56" y="102" width="130" height="10" fill="#FFD100" fill-opacity="0.9"/>
+    <!-- Blue band -->
+    <rect x="56" y="112" width="130" height="14" fill="#003087" fill-opacity="0.8"/>
+    <!-- Red band -->
+    <rect x="56" y="126" width="130" height="11" fill="#CC1C2B" fill-opacity="0.8"/>
+    <!-- Avatar placeholder -->
+    <circle cx="121" cy="196" r="34" fill="#1a0a35" stroke="#FFD100" stroke-width="1.5" stroke-opacity="0.5"/>
+    <circle cx="121" cy="186" r="14" fill="#e0b6ff" fill-opacity="0.4"/>
+    <path d="M100 218 Q121 208 142 218" fill="#e0b6ff" fill-opacity="0.3"/>
+    <!-- Name placeholder lines -->
+    <rect x="76"  y="238" width="90" height="7" rx="3.5" fill="#FFD100" fill-opacity="0.5"/>
+    <rect x="86"  y="251" width="70" height="6" rx="3"   fill="#e0b6ff" fill-opacity="0.25"/>
+    <!-- Bottom red strip -->
+    <rect x="56" y="271" width="130" height="14" rx="0" fill="#CC1C2B" fill-opacity="0.7"/>
+    <rect x="56" y="277" width="130" height="8"  rx="0" fill="#CC1C2B" fill-opacity="0.7"/>
+  </g>
+
+  <!-- Back-right poster -->
+  <g transform="rotate(6, 279, 187)">
+    <rect x="214" y="90" width="130" height="195" rx="8" fill="#0d0820" stroke="#CC1C2B" stroke-width="1.5" stroke-opacity="0.6" filter="url(#posterShadow)"/>
+    <rect x="214" y="90"  width="130" height="22" rx="8" fill="#FFD100" fill-opacity="0.9"/>
+    <rect x="214" y="102" width="130" height="10" fill="#FFD100" fill-opacity="0.9"/>
+    <rect x="214" y="112" width="130" height="14" fill="#003087" fill-opacity="0.8"/>
+    <rect x="214" y="126" width="130" height="11" fill="#CC1C2B" fill-opacity="0.8"/>
+    <circle cx="279" cy="196" r="34" fill="#1a0a35" stroke="#CC1C2B" stroke-width="1.5" stroke-opacity="0.5"/>
+    <circle cx="279" cy="186" r="14" fill="#e0b6ff" fill-opacity="0.4"/>
+    <path d="M258 218 Q279 208 300 218" fill="#e0b6ff" fill-opacity="0.3"/>
+    <rect x="234" y="238" width="90" height="7" rx="3.5" fill="#CC1C2B" fill-opacity="0.6"/>
+    <rect x="244" y="251" width="70" height="6" rx="3"   fill="#e0b6ff" fill-opacity="0.25"/>
+    <rect x="214" y="271" width="130" height="14" rx="0" fill="#CC1C2B" fill-opacity="0.7"/>
+    <rect x="214" y="277" width="130" height="8"  rx="0" fill="#CC1C2B" fill-opacity="0.7"/>
+  </g>
+
+  <!-- Front-center poster (most prominent) -->
+  <g transform="rotate(0, 200, 262)">
+    <rect x="135" y="165" width="130" height="195" rx="8" fill="#0f0a22" stroke="#FFD100" stroke-width="2" filter="url(#posterShadow)"/>
+    <!-- Flag bands top -->
+    <rect x="135" y="165" width="130" height="26" rx="8" fill="#FFD100"/>
+    <rect x="135" y="179" width="130" height="13" fill="#FFD100"/>
+    <rect x="135" y="191" width="130" height="17" fill="#003087"/>
+    <rect x="135" y="208" width="130" height="13" fill="#CC1C2B"/>
+    <!-- Avatar -->
+    <circle cx="200" cy="278" r="38" fill="#1a0a35" stroke="#FFD100" stroke-width="2"/>
+    <circle cx="200" cy="267" r="16" fill="#e0b6ff" fill-opacity="0.55"/>
+    <path d="M176 302 Q200 290 224 302" fill="#e0b6ff" fill-opacity="0.45"/>
+    <!-- Name lines -->
+    <rect x="155" y="325" width="90" height="8"  rx="4"   fill="#FFD100" fill-opacity="0.7"/>
+    <rect x="162" y="339" width="76" height="7"  rx="3.5" fill="#e0b6ff" fill-opacity="0.3"/>
+    <!-- PSP label -->
+    <rect x="155" y="350" width="90" height="6"  rx="3"   fill="#CC1C2B" fill-opacity="0.5"/>
+    <!-- Bottom red band -->
+    <rect x="135" y="346" width="130" height="14" rx="0" fill="#CC1C2B" fill-opacity="0.8"/>
+    <rect x="135" y="352" width="130" height="8"  rx="0" fill="#CC1C2B" fill-opacity="0.8"/>
+  </g>
+
+  <!-- PSP label badge -->
+  <rect x="135" y="378" width="130" height="26" rx="0" fill="#CC1C2B" fill-opacity="0.85"/>
+  <text x="200" y="396" text-anchor="middle" font-size="13" fill="#FFD100" font-family="Inter,sans-serif" font-weight="800" letter-spacing="2">PSP · GALÁPAGOS</text>
+
+  <!-- Bottom info chips -->
+  <rect x="60"  y="432" width="120" height="26" rx="13" fill="#0d0820" stroke="#FFD100" stroke-width="1.2" stroke-opacity="0.6"/>
+  <text x="120" y="449" text-anchor="middle" font-size="12" fill="#FFD100" font-family="Inter,sans-serif" font-weight="600">11 piezas</text>
+
+  <rect x="220" y="432" width="120" height="26" rx="13" fill="#0d0820" stroke="#CC1C2B" stroke-width="1.2" stroke-opacity="0.6"/>
+  <text x="280" y="449" text-anchor="middle" font-size="12" fill="#e0b6ff" font-family="Inter,sans-serif" font-weight="600">Freelance</text>
+</svg>

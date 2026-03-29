@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1e0840"/>
+      <stop offset="100%" stop-color="#0a0118"/>
+    </radialGradient>
+    <!-- Dark screen glow -->
+    <radialGradient id="screenGlow" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#3d1a6e" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#0a0118" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f7c948"/>
+      <stop offset="100%" stop-color="#c8860a"/>
+    </linearGradient>
+    <linearGradient id="screenFill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a0935"/>
+      <stop offset="100%" stop-color="#0d0120"/>
+    </linearGradient>
+    <filter id="frameShadow">
+      <feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="goldGlow">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="500" fill="url(#bg)"/>
+  <ellipse cx="200" cy="250" rx="190" ry="170" fill="url(#screenGlow)"/>
+
+  <!-- Monitor outer frame — centered: x=42 y=110 w=316 h=236 → visual center (200,228) -->
+  <rect x="42" y="110" width="316" height="236" rx="10" fill="#1a0830" stroke="#7d2bbd" stroke-width="2" filter="url(#frameShadow)"/>
+
+  <!-- Screen bezel inner -->
+  <rect x="52" y="120" width="296" height="216" rx="6" fill="url(#screenFill)"/>
+
+  <!-- Subtle scan-line texture -->
+  <rect x="52" y="120" width="296" height="216" rx="6" fill="#7d2bbd" fill-opacity="0.04"/>
+
+  <!-- Blockchain nodes — top strip of screen -->
+  <circle cx="94"  cy="155" r="14" fill="none" stroke="#7d2bbd" stroke-width="2" stroke-opacity="0.9"/>
+  <text x="94"  y="160" text-anchor="middle" font-size="12" fill="#e0b6ff" font-family="monospace" font-weight="bold">Ξ</text>
+
+  <circle cx="152" cy="145" r="14" fill="none" stroke="#9b5de5" stroke-width="2" stroke-opacity="0.9"/>
+  <text x="152" y="150" text-anchor="middle" font-size="9"  fill="#dbb8ff" font-family="monospace" font-weight="bold">BTC</text>
+
+  <circle cx="248" cy="145" r="14" fill="none" stroke="#9b5de5" stroke-width="2" stroke-opacity="0.9"/>
+  <text x="248" y="150" text-anchor="middle" font-size="12" fill="#dbb8ff" font-family="monospace">⛓</text>
+
+  <circle cx="306" cy="155" r="14" fill="none" stroke="#7d2bbd" stroke-width="2" stroke-opacity="0.9"/>
+  <text x="306" y="160" text-anchor="middle" font-size="9"  fill="#e0b6ff" font-family="monospace" font-weight="bold">BTC</text>
+
+  <line x1="108" y1="153" x2="138" y2="148" stroke="#7d2bbd" stroke-width="1.3" stroke-dasharray="4,3" stroke-opacity="0.6"/>
+  <line x1="166" y1="146" x2="234" y2="146" stroke="#9b5de5" stroke-width="1.3" stroke-dasharray="4,3" stroke-opacity="0.6"/>
+  <line x1="262" y1="148" x2="292" y2="152" stroke="#7d2bbd" stroke-width="1.3" stroke-dasharray="4,3" stroke-opacity="0.6"/>
+
+  <!-- Central ₿ — glowing gold on dark screen -->
+  <text x="200" y="295" text-anchor="middle" font-size="118"
+        fill="url(#goldGrad)" font-family="Georgia,serif" font-weight="bold"
+        fill-opacity="0.95" filter="url(#goldGlow)">₿</text>
+
+  <!-- Corner decorations inside screen -->
+  <line x1="60"  y1="305" x2="108" y2="305" stroke="#7d2bbd" stroke-width="1.3" stroke-opacity="0.4"/>
+  <line x1="60"  y1="315" x2="122" y2="315" stroke="#7d2bbd" stroke-width="1.3" stroke-opacity="0.3"/>
+  <line x1="278" y1="305" x2="340" y2="305" stroke="#7d2bbd" stroke-width="1.3" stroke-opacity="0.4"/>
+  <line x1="270" y1="315" x2="340" y2="315" stroke="#7d2bbd" stroke-width="1.3" stroke-opacity="0.3"/>
+
+  <!-- YouTube play badge — bottom-right of screen -->
+  <rect x="292" y="308" width="46" height="24" rx="7" fill="#ff0000" fill-opacity="0.95"/>
+  <polygon points="308,314 308,328 324,321" fill="#fff"/>
+
+  <!-- Monitor chin bar -->
+  <rect x="42" y="342" width="316" height="10" rx="0" fill="#150328" stroke="#7d2bbd" stroke-width="1" stroke-opacity="0.4"/>
+
+  <!-- Stand neck -->
+  <rect x="190" y="352" width="20" height="26" rx="4" fill="#1a0935"/>
+  <!-- Stand base -->
+  <rect x="152" y="375" width="96" height="11" rx="5.5" fill="#271642" stroke="#7d2bbd" stroke-width="1" stroke-opacity="0.5"/>
+
+  <!-- Subscriber badge -->
+  <rect x="112" y="404" width="176" height="34" rx="17" fill="#271642" stroke="#7d2bbd" stroke-width="1.5"/>
+  <text x="200" y="426" text-anchor="middle" font-size="14" fill="#e0b6ff" font-family="Inter,sans-serif" font-weight="700">+14K Suscriptores</text>
+
+  <text x="200" y="464" text-anchor="middle" font-size="11" fill="#cfc2d5" fill-opacity="0.45" font-family="Inter,sans-serif">WhiteboardCrypto en Español</text>
+</svg>

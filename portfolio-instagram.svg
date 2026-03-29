@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#2a0d52"/>
+      <stop offset="100%" stop-color="#0d0120"/>
+    </radialGradient>
+    <linearGradient id="igGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f9ce34"/>
+      <stop offset="25%" stop-color="#ee2a7b"/>
+      <stop offset="60%" stop-color="#6228d7"/>
+      <stop offset="100%" stop-color="#4f5bd5"/>
+    </linearGradient>
+    <linearGradient id="igGrad2" x1="100%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#f9ce34"/>
+      <stop offset="40%" stop-color="#ee2a7b"/>
+      <stop offset="100%" stop-color="#833ab4"/>
+    </linearGradient>
+    <filter id="softglow">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="500" fill="url(#bg)"/>
+  <ellipse cx="200" cy="250" rx="160" ry="140" fill="#7d2bbd" fill-opacity="0.14"/>
+
+  <!-- Camera rounded square — centered: x=100, y=120, w=200, h=200 → center (200,220) -->
+  <rect x="100" y="120" width="200" height="200" rx="50" fill="url(#igGrad)" filter="url(#softglow)" fill-opacity="0.6"/>
+  <!-- Camera body -->
+  <rect x="108" y="128" width="184" height="184" rx="42" fill="#1a0935"/>
+  <rect x="108" y="128" width="184" height="184" rx="42" fill="none" stroke="url(#igGrad)" stroke-width="4"/>
+
+  <!-- Camera lens rings -->
+  <circle cx="200" cy="220" r="58" fill="none" stroke="url(#igGrad2)" stroke-width="5"/>
+  <circle cx="200" cy="220" r="48" fill="#0f0625" stroke="#3d2b60" stroke-width="1.5"/>
+  <circle cx="200" cy="220" r="36" fill="#150930" stroke="#7d2bbd" stroke-width="1.5"/>
+  <circle cx="200" cy="220" r="24" fill="#271642"/>
+  <circle cx="200" cy="220" r="22" fill="#1a0935"/>
+  <!-- Lens shine -->
+  <circle cx="190" cy="210" r="7" fill="#ffffff" fill-opacity="0.12"/>
+
+  <!-- Viewfinder dot -->
+  <circle cx="238" cy="156" r="8" fill="url(#igGrad)"/>
+  <!-- Flash -->
+  <rect x="126" y="150" width="28" height="18" rx="9" fill="#271642" stroke="#7d2bbd" stroke-width="1.5"/>
+
+  <!-- Photo grid — 3×2 below camera -->
+  <g opacity="0.85">
+    <rect x="108" y="332" width="56" height="56" rx="6" fill="#3d1a6e"/>
+    <rect x="172" y="332" width="56" height="56" rx="6" fill="#5b308c" fill-opacity="0.8"/>
+    <rect x="236" y="332" width="56" height="56" rx="6" fill="#271642"/>
+    <rect x="108" y="396" width="56" height="56" rx="6" fill="#271642"/>
+    <rect x="172" y="396" width="56" height="56" rx="6" fill="#3d1a6e"/>
+    <rect x="236" y="396" width="56" height="56" rx="6" fill="#5b308c" fill-opacity="0.8"/>
+    <!-- Tile content -->
+    <circle cx="136" cy="360" r="14" fill="#7d2bbd" fill-opacity="0.5"/>
+    <circle cx="200" cy="360" r="14" fill="#e0b6ff" fill-opacity="0.3"/>
+    <circle cx="264" cy="360" r="14" fill="#7d2bbd" fill-opacity="0.4"/>
+    <circle cx="136" cy="424" r="14" fill="#e0b6ff" fill-opacity="0.25"/>
+    <circle cx="200" cy="424" r="14" fill="#7d2bbd" fill-opacity="0.5"/>
+    <circle cx="264" cy="424" r="14" fill="#e0b6ff" fill-opacity="0.3"/>
+  </g>
+</svg>

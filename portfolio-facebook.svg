@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#0a1628"/>
+      <stop offset="100%" stop-color="#080114"/>
+    </radialGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a2a4a"/>
+      <stop offset="100%" stop-color="#0f1a30"/>
+    </linearGradient>
+    <linearGradient id="imgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1877f2" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#6a0baa" stop-opacity="0.7"/>
+    </linearGradient>
+    <linearGradient id="barGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1877f2"/>
+      <stop offset="100%" stop-color="#4f5bd5"/>
+    </linearGradient>
+    <filter id="cardShadow">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+    <clipPath id="avatarClip">
+      <circle cx="101" cy="152" r="18"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="500" fill="url(#bg)"/>
+  <ellipse cx="200" cy="250" rx="200" ry="170" fill="#1877f2" fill-opacity="0.05"/>
+
+  <!-- Facebook post card — centered: x=48 y=100 w=304 h=288 → center (200,244) -->
+  <rect x="48" y="100" width="304" height="288" rx="16" fill="url(#cardGrad)" stroke="#1877f2" stroke-width="1.5" stroke-opacity="0.4" filter="url(#cardShadow)"/>
+
+  <!-- Card header -->
+  <!-- Avatar circle -->
+  <circle cx="101" cy="152" r="20" fill="#1877f2" fill-opacity="0.3" stroke="#1877f2" stroke-width="2"/>
+  <!-- Avatar person silhouette -->
+  <circle cx="101" cy="146" r="7" fill="#90b8f8"/>
+  <path d="M86 166 Q101 158 116 166" fill="#90b8f8"/>
+
+  <!-- Page name + timestamp -->
+  <rect x="130" y="141" width="110" height="9" rx="4.5" fill="#90b8f8" fill-opacity="0.7"/>
+  <rect x="130" y="156" width="70" height="7" rx="3.5" fill="#5588cc" fill-opacity="0.5"/>
+  <!-- Globe icon hint -->
+  <circle cx="210" cy="159" r="4" fill="none" stroke="#5588cc" stroke-width="1" stroke-opacity="0.6"/>
+  <line x1="210" y1="155" x2="210" y2="163" stroke="#5588cc" stroke-width="1" stroke-opacity="0.5"/>
+
+  <!-- Three-dot menu -->
+  <circle cx="326" cy="148" r="3" fill="#5588cc" fill-opacity="0.6"/>
+  <circle cx="326" cy="156" r="3" fill="#5588cc" fill-opacity="0.6"/>
+  <circle cx="326" cy="164" r="3" fill="#5588cc" fill-opacity="0.6"/>
+
+  <!-- Post caption text lines -->
+  <rect x="68" y="180" width="220" height="8" rx="4" fill="#7aa8e0" fill-opacity="0.5"/>
+  <rect x="68" y="194" width="170" height="8" rx="4" fill="#7aa8e0" fill-opacity="0.35"/>
+
+  <!-- Post image area -->
+  <rect x="48" y="212" width="304" height="118" fill="url(#imgGrad)"/>
+  <!-- Image placeholder content: abstract shapes -->
+  <circle cx="140" cy="271" r="34" fill="#1877f2" fill-opacity="0.25"/>
+  <circle cx="260" cy="265" r="42" fill="#6a0baa" fill-opacity="0.3"/>
+  <rect x="160" y="245" width="80" height="50" rx="8" fill="#ffffff" fill-opacity="0.06"/>
+  <!-- Subtle "play" hint -->
+  <circle cx="200" cy="271" r="20" fill="#000" fill-opacity="0.3" stroke="#fff" stroke-width="1.5" stroke-opacity="0.4"/>
+  <polygon points="194,263 194,279 212,271" fill="#fff" fill-opacity="0.6"/>
+
+  <!-- Reaction summary row -->
+  <g transform="translate(68, 342)">
+    <!-- Reaction emoji circles -->
+    <circle cx="10" cy="10" r="10" fill="#1877f2"/>
+    <text x="10" y="14" text-anchor="middle" font-size="11">👍</text>
+    <circle cx="26" cy="10" r="10" fill="#ff4d6d"/>
+    <text x="26" y="14" text-anchor="middle" font-size="11">❤️</text>
+    <circle cx="42" cy="10" r="10" fill="#f7c948"/>
+    <text x="42" y="14" text-anchor="middle" font-size="11">😮</text>
+    <!-- Reaction count -->
+    <text x="60" y="14" font-size="12" fill="#7aa8e0" font-family="Inter,sans-serif">1.4K</text>
+    <!-- Comments / shares right-aligned -->
+    <text x="200" y="14" font-size="12" fill="#5588cc" font-family="Inter,sans-serif" text-anchor="end">48 comentarios · 22 veces compartido</text>
+  </g>
+
+  <!-- Divider -->
+  <line x1="68" y1="364" x2="332" y2="364" stroke="#1877f2" stroke-width="1" stroke-opacity="0.2"/>
+
+  <!-- Action buttons row -->
+  <g transform="translate(68, 372)" font-size="13" font-family="Inter,sans-serif" fill="#5588cc" font-weight="600">
+    <text x="0"   y="16">👍 Me gusta</text>
+    <text x="108" y="16">💬 Comentar</text>
+    <text x="222" y="16">↗ Compartir</text>
+  </g>
+
+  <!-- Engagement bar at bottom -->
+  <rect x="48" y="410" width="304" height="6" rx="3" fill="#1a2a4a"/>
+  <rect x="48" y="410" width="210" height="6" rx="3" fill="url(#barGrad)" fill-opacity="0.8"/>
+
+  <!-- Stats chips -->
+  <rect x="68"  y="432" width="82" height="26" rx="13" fill="#0f1a30" stroke="#1877f2" stroke-width="1.2" stroke-opacity="0.5"/>
+  <text x="109" y="449" text-anchor="middle" font-size="12" fill="#90b8f8" font-family="Inter,sans-serif" font-weight="600">1.4K ♥</text>
+
+  <rect x="160" y="432" width="82" height="26" rx="13" fill="#0f1a30" stroke="#1877f2" stroke-width="1.2" stroke-opacity="0.5"/>
+  <text x="201" y="449" text-anchor="middle" font-size="12" fill="#90b8f8" font-family="Inter,sans-serif" font-weight="600">22 shares</text>
+
+  <rect x="252" y="432" width="82" height="26" rx="13" fill="#0f1a30" stroke="#1877f2" stroke-width="1.2" stroke-opacity="0.5"/>
+  <text x="293" y="449" text-anchor="middle" font-size="12" fill="#90b8f8" font-family="Inter,sans-serif" font-weight="600">48 💬</text>
+</svg>

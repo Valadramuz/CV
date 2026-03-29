@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#2d1155"/>
+      <stop offset="100%" stop-color="#0d0120"/>
+    </radialGradient>
+    <linearGradient id="screen" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4a1e8a"/>
+      <stop offset="100%" stop-color="#1a0935"/>
+    </linearGradient>
+    <linearGradient id="tikGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#69c9d0"/>
+      <stop offset="100%" stop-color="#ee1d52"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="500" fill="url(#bg)"/>
+  <ellipse cx="90" cy="260" rx="130" ry="110" fill="#7d2bbd" fill-opacity="0.18"/>
+  <ellipse cx="340" cy="180" rx="90" ry="90" fill="#e0b6ff" fill-opacity="0.06"/>
+
+  <!-- Phone body — centered: x=118, y=100, w=164, h=300 → center (200, 250) -->
+  <rect x="118" y="100" width="164" height="300" rx="28" fill="#1d0c38" stroke="#7d2bbd" stroke-width="2"/>
+  <!-- Notch -->
+  <rect x="170" y="108" width="60" height="13" rx="6.5" fill="#0d0120"/>
+  <!-- Screen -->
+  <rect x="128" y="126" width="144" height="262" rx="8" fill="url(#screen)"/>
+
+  <!-- Dancer silhouette -->
+  <circle cx="196" cy="192" r="20" fill="#e0b6ff" fill-opacity="0.85"/>
+  <path d="M196 212 L196 257" stroke="#e0b6ff" stroke-width="7" stroke-linecap="round"/>
+  <path d="M196 230 L171 220 M196 230 L221 214" stroke="#e0b6ff" stroke-width="6" stroke-linecap="round"/>
+  <path d="M196 257 L177 287 M196 257 L215 287" stroke="#e0b6ff" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- TikTok music note (right side of screen) -->
+  <g filter="url(#glow)">
+    <rect x="232" y="224" width="26" height="11" rx="5.5" fill="url(#tikGrad)"/>
+    <line x1="254" y1="228" x2="254" y2="252" stroke="url(#tikGrad)" stroke-width="4.5" stroke-linecap="round"/>
+    <circle cx="244" cy="254" r="7" fill="url(#tikGrad)"/>
+  </g>
+
+  <!-- Floating hearts -->
+  <text x="242" y="320" font-size="20" fill="#ff4d6d" fill-opacity="0.95">♥</text>
+  <text x="236" y="296" font-size="16" fill="#ff4d6d" fill-opacity="0.65">♥</text>
+  <text x="244" y="276" font-size="12" fill="#ff4d6d" fill-opacity="0.38">♥</text>
+
+  <!-- Username bar -->
+  <rect x="136" y="352" width="85" height="7" rx="3.5" fill="#e0b6ff" fill-opacity="0.35"/>
+  <rect x="136" y="365" width="62" height="5" rx="2.5" fill="#e0b6ff" fill-opacity="0.2"/>
+
+  <!-- Progress bar -->
+  <rect x="128" y="378" width="144" height="4" rx="2" fill="#ffffff" fill-opacity="0.08"/>
+  <rect x="128" y="378" width="55" height="4" rx="2" fill="#e0b6ff" fill-opacity="0.7"/>
+
+  <!-- Home indicator -->
+  <rect x="171" y="390" width="58" height="5" rx="2.5" fill="#7d2bbd" fill-opacity="0.8"/>
+
+  <!-- Floating notes outside phone -->
+  <text x="44" y="265" font-size="42" fill="#e0b6ff" fill-opacity="0.22" font-family="serif">♫</text>
+  <text x="340" y="320" font-size="26" fill="#e0b6ff" fill-opacity="0.16" font-family="serif">♪</text>
+  <text x="52" y="350" font-size="18" fill="#e0b6ff" fill-opacity="0.12" font-family="serif">♩</text>
+
+  <!-- Stat chips -->
+  <rect x="44" y="424" width="80" height="28" rx="14" fill="#271642" stroke="#7d2bbd" stroke-width="1"/>
+  <text x="84" y="443" text-anchor="middle" font-size="13" fill="#e0b6ff" font-family="Inter,sans-serif" font-weight="600">+24K ♥</text>
+  <rect x="276" y="424" width="80" height="28" rx="14" fill="#271642" stroke="#7d2bbd" stroke-width="1"/>
+  <text x="316" y="443" text-anchor="middle" font-size="13" fill="#e0b6ff" font-family="Inter,sans-serif" font-weight="600">Viral 🔥</text>
+</svg>
